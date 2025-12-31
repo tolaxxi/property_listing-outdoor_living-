@@ -5,7 +5,7 @@ import PropertyListing from './pages/PropertyListing';
 
 const App = () => {
   return (
-    <main className="relative">
+    <main className="">
       <HomePage />
       <PropertyListing />
       <div className="z-10 sticky bottom-5 flex justify-center items-center  ">

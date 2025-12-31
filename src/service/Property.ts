@@ -8,7 +8,7 @@ export const propertyApi = createApi({
   }),
 
   endpoints: (builder) => ({
-    getProperties: builder.query<Properties, void>({
+    getProperties: builder.query<Properties[], void>({
       query: () => `4-frontend-libaries/challenges/group_1/data/property-listing-data.json`,
     }),
   }),
