@@ -27,3 +27,5 @@ export const MobileIcon = [
     icon: IoBedOutline,
   },
 ];
+
+export const propertyTypes = [{ label: '1-2 people' }, { label: '3-4 people' }, { label: '5+ people' }];

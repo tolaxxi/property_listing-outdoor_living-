@@ -4,7 +4,7 @@ import PropertyType from './PropertyType';
 const Navbar = () => {
   return (
     <nav
-      className="bg-slate-900 border md:flex hidden items-center justify-between border-gray-700
+      className="bg-slate-900 border md:flex relative hidden items-center justify-between border-gray-700
      w-[90%] opacity-90  py-7 px-10 rounded-2xl"
     >
       {/* locations */}
