@@ -1,4 +1,4 @@
-import Navbar from './features/ui/Navbar/desktop/Navbar';
+import Navbar from './features/ui/Navbar/largeScreens/Navbar';
 import MobileNav from './features/ui/Navbar/mobile/MobileNav';
 import HomePage from './pages/HomePage';
 import PropertyListing from './pages/PropertyListing';

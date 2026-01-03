@@ -1,3 +1,4 @@
+import SuperHostToggle from '../../../../components/SuperHostToggle';
 import { NavItems } from '../../../../utils/constants';
 import PropertyType from './PropertyType';
 
@@ -20,14 +21,7 @@ const Navbar = () => {
 
       <div className=" flex gap-6">
         {/* super host toggle */}
-        <span className=" flex gap-2 items-center text-gray-400">
-          <label className="switch">
-            <input type="checkbox" />
-            <span className="slider round"></span>
-          </label>
-
-          <p>Super Host</p>
-        </span>
+        <SuperHostToggle />
         <PropertyType />
       </div>
     </nav>

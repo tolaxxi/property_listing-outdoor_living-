@@ -1,6 +1,8 @@
+import type { ComponentType } from 'react';
 import { IoLocationOutline } from 'react-icons/io5';
 import { IoBedOutline } from 'react-icons/io5';
 import { TbMedal } from 'react-icons/tb';
+import type { PopupType } from '../types/popup';
 
 export const NavItems = [
   { id: 1, label: 'all stays' },
@@ -10,22 +12,32 @@ export const NavItems = [
   { id: 5, label: 'switzerland' },
 ];
 
-export const MobileIcon = [
+interface MobileIconItem {
+  label: string;
+  icon: ComponentType;
+  type: PopupType;
+}
+
+export const MobileIcon: MobileIconItem[] = [
   {
-    id: 1,
     label: 'Location',
     icon: IoLocationOutline,
+    type: 'location',
   },
   {
-    id: 2,
     label: 'Super Host',
     icon: TbMedal,
+    type: 'superHost',
   },
   {
-    id: 3,
     label: 'property Type',
     icon: IoBedOutline,
+    type: 'propertyType',
   },
 ];
 
-export const propertyTypes = [{ label: '1-2 people' }, { label: '3-4 people' }, { label: '5+ people' }];
+export const propertyTypes = [
+  { id: 1, label: '1-2 people' },
+  { id: 2, label: '3-4 people' },
+  { id: 3, label: '5+ people' },
+];
