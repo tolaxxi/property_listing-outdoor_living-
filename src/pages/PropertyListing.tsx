@@ -8,7 +8,7 @@ const PropertyListing = () => {
   if (error || !data) return <p>Error</p>;
 
   return (
-    <section className="w-full flex gap-10 flex-wrap items-center  justify-center md:py-30 p-10 bg-gray-950 ">
+    <section className="w-full flex gap-10 flex-wrap items-center  justify-center md:py-30 p-10">
       {data.map((property) => {
         return <PropertyCard property={property} key={property.id} />;
       })}
