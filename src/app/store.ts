@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
 import { propertyApi } from '../service/Property';
+import propertyModalReducer from '../features/ui/modal/modalSlice';
 
 export const store = configureStore({
   reducer: {
     [propertyApi.reducerPath]: propertyApi.reducer,
+    propertyModal: propertyModalReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(propertyApi.middleware),
 });

@@ -1,16 +1,17 @@
 import { FaStar } from 'react-icons/fa6';
 import { GoHome } from 'react-icons/go';
 import { IoPersonSharp } from 'react-icons/io5';
-
 import type { Properties } from '../types/propertyListing';
+import { open } from '../features/ui/modal/modalSlice';
+import { useDispatch } from 'react-redux';
 
 interface propertyCardProp {
   property: Properties;
 }
 const PropertyCard = ({ property }: propertyCardProp) => {
-  
+  const dispatch = useDispatch();
   return (
-    <div className=" overflow-hidden border border-gray-700 w-85  rounded-2xl">
+    <div className=" overflow-hidden border border-gray-700 w-85  rounded-2xl" onClick={() => dispatch(open(property))}>
       <div className="relative">
         {property.superhost && (
           <span className="absolute flex items-center bg-gray-950 gap-2 text-gray-300 text-sm px-3 py-1 rounded-2xl top-2 left-2">
