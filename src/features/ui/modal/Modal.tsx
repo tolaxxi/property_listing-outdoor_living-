@@ -3,8 +3,7 @@ import { GoHome } from 'react-icons/go';
 import { IoPersonSharp } from 'react-icons/io5';
 import { IoMdClose } from 'react-icons/io';
 import type { Properties } from '../../../types/propertyListing';
-import { useDispatch, useSelector } from 'react-redux';
-import type { RootState } from '../../../app/store';
+import { useDispatch } from 'react-redux';
 import { close } from './modalSlice';
 
 interface PropertyModalProps {
@@ -12,13 +11,11 @@ interface PropertyModalProps {
 }
 
 const Modal = ({ property }: PropertyModalProps) => {
-  const isOpen = useSelector((state: RootState) => state.propertyModal.isOpen);
   const dispatch = useDispatch();
-  // if (!isOpen) return null;
   return (
     <section className="fixed w-full inset-0 h-dvh flex items-center z-50 justify-center">
       {/* modal backdrop */}
-      <div className=" absolute bg-gray-950 inset-0 opacity-20" onClick={() => dispatch(close())}></div>
+      <div className=" absolute bg-gray-950 inset-0 opacity-60" onClick={() => dispatch(close())}></div>
       {/* modal content */}
       <div
         className=" border-gray-700 border bg-gray-950 text-gray-400 md:w-[40%] relative rounded-2xl flex flex-col overflow-hidden w-[90%] 
@@ -49,10 +46,10 @@ const Modal = ({ property }: PropertyModalProps) => {
           {/*bedrooms and no. of guests  */}
           <span className="flex gap-5 text-sm items-center">
             <p className="flex gap-2 items-center">
-              <GoHome /> {property.capacity.bedroom}
+              <GoHome /> {property.capacity.bedroom} bedroom
             </p>
             <p className="flex gap-2 items-center">
-              <IoPersonSharp /> {property.capacity.people}
+              <IoPersonSharp /> {property.capacity.people} guests
             </p>
           </span>
 
