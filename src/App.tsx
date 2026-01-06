@@ -1,4 +1,3 @@
-import Modal from './features/ui/modal/Modal';
 import Navbar from './features/ui/Navbar/largeScreens/Navbar';
 import MobileNav from './features/ui/Navbar/mobile/MobileNav';
 import HomePage from './pages/HomePage';

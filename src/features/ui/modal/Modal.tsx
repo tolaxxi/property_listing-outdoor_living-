@@ -32,6 +32,12 @@ const Modal = ({ property }: PropertyModalProps) => {
           >
             <IoMdClose />
           </button>
+          {/* superHost tag */}
+          {property.superhost && (
+            <span className="absolute flex items-center bg-gray-950 gap-4 justify-center text-gray-300 text-sm px-5 py-2 rounded-4xl top-5 left-5">
+              Superhost <FaStar className="text-amber-300" />
+            </span>
+          )}
           <img src={property.image} alt="" className="w-full h-full object-cover" />
         </div>
 

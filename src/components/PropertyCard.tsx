@@ -14,7 +14,7 @@ const PropertyCard = ({ property }: propertyCardProp) => {
     <div className=" overflow-hidden border border-gray-700 w-85  rounded-2xl" onClick={() => dispatch(open(property))}>
       <div className="relative">
         {property.superhost && (
-          <span className="absolute flex items-center bg-gray-950 gap-2 text-gray-300 text-sm px-3 py-1 rounded-2xl top-2 left-2">
+          <span className="absolute flex items-center justify-center bg-gray-950 gap-2 text-gray-300 text-sm px-3 py-1 rounded-2xl top-2 left-2">
             Superhost <FaStar className="text-amber-300" />
           </span>
         )}
