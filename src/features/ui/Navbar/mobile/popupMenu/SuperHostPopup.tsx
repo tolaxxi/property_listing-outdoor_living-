@@ -1,4 +1,4 @@
-import SuperHostToggle from '../../../../../components/SuperHostToggle';
+import SuperHostToggle from '../../../superHostToggle/SuperHostToggle';
 
 const SuperHostPopup = () => {
   return (

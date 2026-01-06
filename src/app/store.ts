@@ -2,11 +2,13 @@ import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
 import { propertyApi } from '../service/Property';
 import propertyModalReducer from '../features/ui/modal/modalSlice';
+import superHostReducer from '../features/ui/superHostToggle/superHostSlice';
 
 export const store = configureStore({
   reducer: {
     [propertyApi.reducerPath]: propertyApi.reducer,
     propertyModal: propertyModalReducer,
+    superHost: superHostReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(propertyApi.middleware),
 });

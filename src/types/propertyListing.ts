@@ -12,3 +12,9 @@ export interface Properties {
   };
   image: string;
 }
+
+export interface PropertyFilter {
+  country?: string;
+  superHost?: boolean;
+  maxGuest?: number;
+}

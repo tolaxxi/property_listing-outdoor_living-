@@ -1,4 +1,4 @@
-import SuperHostToggle from '../../../../components/SuperHostToggle';
+import SuperHostToggle from '../../superHostToggle/SuperHostToggle';
 import { NavItems } from '../../../../utils/constants';
 import PropertyType from './PropertyType';
 
