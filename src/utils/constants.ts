@@ -37,7 +37,10 @@ export const MobileIcon: MobileIconItem[] = [
 ];
 
 export const propertyTypes = [
-  { id: 1, label: '1-2 people' },
-  { id: 2, label: '3-4 people' },
-  { id: 3, label: '5+ people' },
-];
+  { label: '1–2 People', key: 'oneToTwoPeople' },
+  { label: '3–4 People', key: 'threeToFourPeople' },
+  { label: '5+ People', key: 'fivePlusPeople' },
+] as const;
+
+export type PropertyTypeKey =
+  typeof propertyTypes[number]['key'];

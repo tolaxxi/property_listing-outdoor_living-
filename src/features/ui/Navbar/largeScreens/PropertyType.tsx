@@ -1,9 +1,15 @@
 import { useState } from 'react';
 import { FaAngleDown } from 'react-icons/fa6';
 import { propertyTypes } from '../../../../utils/constants';
+import { useAppDispatch, useAppSelector } from '../../../../app/hooks';
+import { selectPropertyType } from '../../filters/propertyTypeSlice';
 
 const PropertyType = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const dispatch = useAppDispatch();
+
+  const selectedTypes = useAppSelector((state) => state.propertyType);
 
   return (
     <div>
@@ -17,10 +23,15 @@ const PropertyType = () => {
       </button>
 
       {isOpen && (
-        <div className="absolute bottom-27 w-45 flex flex-col bg-slate-900  py-3 px-5 gap-2 rounded-md text-gray-300 items-start right-0">
-          {propertyTypes.map(({ label }) => {
+        <div className="absolute bottom-27 w-45 flex flex-col bg-slate-900  py-3 px-2 gap-2 rounded-md text-gray-300 items-start right-0">
+          {propertyTypes.map(({ label, key }) => {
+            const isActive = selectedTypes[key];
             return (
-              <button className="" key={label}>
+              <button
+                className={`${isActive && 'bg-gray-700'} w-full text-start px-5 rounded-lg`}
+                key={key}
+                onClick={() => dispatch(selectPropertyType(key))}
+              >
                 {label}
               </button>
             );
