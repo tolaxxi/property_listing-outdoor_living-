@@ -1,4 +1,4 @@
-import felix from '../assets/Background_Images/pexels-eberhardgross-3389531.jpg';
+import felix from '../assets/Background_Images/largeScreens/pexels-serra-nur-kaynak-2156630399-34303478.jpg';
 
 const HomePage = () => {
   return (
@@ -13,7 +13,7 @@ const HomePage = () => {
         >
           Peace, nature, dream
         </h2>
-        <p className="md:text-2xl text-lg leading-15 md:leading-20">Find and book a great experience</p>
+        <p className="md:text-2xl text-lg leading-15 md:leading-20 text-shadow-black text-shadow-2xs">Find and book a great experience</p>
       </div>
     </main>
   );

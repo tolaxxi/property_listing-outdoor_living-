@@ -1,6 +1,6 @@
 import { FaStar } from 'react-icons/fa6';
 import { GoHome } from 'react-icons/go';
-import { IoPersonSharp } from 'react-icons/io5';
+import { IoLocationOutline, IoPersonSharp } from 'react-icons/io5';
 import { IoMdClose } from 'react-icons/io';
 import type { Properties } from '../../../types/propertyListing';
 import { useDispatch } from 'react-redux';
@@ -44,19 +44,29 @@ const Modal = ({ property }: PropertyModalProps) => {
         {/* modal content details */}
         <div className="p-4 gap-5 flex flex-col">
           {/* modal title and desc */}
-          <span className="flex flex-col gap-2.5">
+          <span className="flex flex-col gap-5">
             <h2 className="font-medium text-3xl text-gray-200">{property.title}</h2>
+
             <p className="text-sm">{property.description}</p>
           </span>
 
-          {/*bedrooms and no. of guests  */}
-          <span className="flex gap-5 text-sm items-center">
-            <p className="flex gap-2 items-center">
-              <GoHome /> {property.capacity.bedroom} bedroom
-            </p>
-            <p className="flex gap-2 items-center">
-              <IoPersonSharp /> {property.capacity.people} guests
-            </p>
+          {/* bedroom,location and guests */}
+          <span className="flex justify-between text-sm items-center">
+            {/*bedrooms and no. of guests  */}
+            <div className="flex gap-5 items-center">
+              <p className="flex gap-2 items-center">
+                <GoHome /> {property.capacity.bedroom} bedroom
+              </p>
+              <p className="flex gap-2 items-center">
+                <IoPersonSharp /> {property.capacity.people} guests
+              </p>
+            </div>
+
+            {/* modal location */}
+            <span className="flex items-center  border-gray-700 gap-1  justify-start text-gray-300 text-sm  p-1.5 rounded-4xl">
+              <IoLocationOutline />
+              {property.location}
+            </span>
           </span>
 
           <hr />
