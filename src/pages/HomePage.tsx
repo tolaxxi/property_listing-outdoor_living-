@@ -18,7 +18,7 @@ const HomePage = () => {
         className="absolute inset-0 block md:hidden bg-cover bg-center"
         style={{ backgroundImage: `url(${smScreenImg})` }}
       />
-      <div className=" w-full md:w-190  text-gray-950 z-20 ">
+      <div className=" w-full md:w-190  text-gray-950 z-10 ">
         <h2
           className=" leading-13 md:leading-29 md:text-8xl md:wrap-break-word 
    text-5xl  font-bold "

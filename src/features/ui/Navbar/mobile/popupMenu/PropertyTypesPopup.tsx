@@ -26,7 +26,7 @@ const PropertyTypesPopup = () => {
               key={key}
               onClick={() => handleSelect(key)}
               className={`w-full text-start rounded-lg px-2.5 py-1
-                ${isActive ? 'bg-gray-400 text-gray-950' : 'hover:bg-slate-800'}
+                ${isActive && 'bg-gray-400 text-gray-950'}
               `}
             >
               {label}
