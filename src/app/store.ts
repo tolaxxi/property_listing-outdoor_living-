@@ -4,6 +4,7 @@ import { propertyApi } from '../service/Property';
 import propertyModalReducer from '../features/ui/modal/modalSlice';
 import superHostReducer from '../features/ui/superHostToggle/superHostSlice';
 import propertyTypeReducer from '../features/ui/filters/propertyTypeSlice';
+import stayLocationReducer from '../features/ui/filters/StayLocationSlice';
 
 export const store = configureStore({
   reducer: {
@@ -11,6 +12,7 @@ export const store = configureStore({
     propertyModal: propertyModalReducer,
     superHost: superHostReducer,
     propertyType: propertyTypeReducer,
+    selectStayLocation: stayLocationReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(propertyApi.middleware),
 });

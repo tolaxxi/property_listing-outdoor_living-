@@ -5,12 +5,14 @@ import { TbMedal } from 'react-icons/tb';
 import type { PopupType } from '../types/popup';
 
 export const NavItems = [
-  { id: 1, label: 'all stays' },
-  { id: 2, label: 'norway' },
-  { id: 3, label: 'finland' },
-  { id: 4, label: 'sweden' },
-  { id: 5, label: 'switzerland' },
-];
+  { id: 1, label: 'all stays', key: 'allStays' },
+  { id: 2, label: 'norway', key: 'norway' },
+  { id: 3, label: 'finland', key: 'finland' },
+  { id: 4, label: 'sweden', key: 'sweden' },
+  { id: 5, label: 'switzerland', key: 'switzerland' },
+] as const;
+
+export type NavItemsKey = (typeof NavItems)[number]['key'];
 
 interface MobileIconItem {
   label: string;

@@ -28,7 +28,7 @@ const PropertyType = () => {
             const isActive = selectedTypes[key];
             return (
               <button
-                className={`${isActive && 'bg-gray-700'} w-full text-start px-5 rounded-lg`}
+                className={`${isActive && 'bg-gray-400 text-slate-800'} w-full text-start px-5 rounded-lg`}
                 key={key}
                 onClick={() => dispatch(selectPropertyType(key))}
               >
