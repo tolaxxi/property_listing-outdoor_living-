@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { FaAngleDown } from 'react-icons/fa6';
 import { propertyTypes } from '../../../../utils/constants';
 import { useAppDispatch, useAppSelector } from '../../../../app/hooks';
@@ -6,13 +6,30 @@ import { selectPropertyType } from '../../filters/propertyTypeSlice';
 
 const PropertyType = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   const dispatch = useAppDispatch();
 
   const selectedTypes = useAppSelector((state) => state.propertyType);
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
+
   return (
-    <div>
+    <div ref={dropdownRef}>
       <button
         className="border flex gap-2 items-center text-gray-400 border-slate-600  rounded-lg p-2"
         onClick={() => {

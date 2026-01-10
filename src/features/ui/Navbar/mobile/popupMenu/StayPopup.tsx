@@ -1,6 +1,6 @@
 import { NavItems, type NavItemsKey } from '../../../../../utils/constants';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectStayLocation, type StayLocationType } from '../../../filters/StayLocationSlice';
+import { selectStayLocation } from '../../../filters/StayLocationSlice';
 import type { RootState } from '../../../../../app/store';
 
 const StayPopup = () => {
