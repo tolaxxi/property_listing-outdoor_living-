@@ -42,5 +42,4 @@ export const propertyTypes = [
   { label: '5+ People', key: 'fivePlusPeople' },
 ] as const;
 
-export type PropertyTypeKey =
-  typeof propertyTypes[number]['key'];
+export type PropertyTypeKey = (typeof propertyTypes)[number]['key'];
