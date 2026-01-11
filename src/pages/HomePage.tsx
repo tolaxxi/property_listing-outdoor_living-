@@ -1,11 +1,10 @@
 import lgScreenImg from '../assets/Background_Images/largeScreens/pexels-lkloeppel-577697.jpg';
-import smScreenImg from '../assets/Background_Images/smallScreens/pexels-mlkbnl-28001434.jpg';
+import smScreenImg from '../assets/Background_Images/smallScreens/pexels-lea-navidi-2786130-4327888.jpg';
 
 const HomePage = () => {
   return (
     <main
       className={`w-full bg-cover items-center justify-center md:justify-start h-dvh flex pl-5 md:pl-30`}
-      // style={{ backgroundImage: `url(${lgScreenImg})` }}
     >
       {/* Desktop */}
       <div
